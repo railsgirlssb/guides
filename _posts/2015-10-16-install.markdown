@@ -1,0 +1,27 @@
+---
+layout: default
+title: Installation von Ruby on Rails
+permalink: install
+---
+
+# Installation von Ruby on Rails
+
+Um Web Apps und andere Dinge mit Ruby on Rails zu bauen, müssen wir Software installieren und die Entwicklungsumgebung auf deinem Rechner einrichten.
+
+Folge den Instruktionen für dein Betriebssystem. Falls dabei Probleme auftreten sollten, keine Sorge, gib uns einfach bei der Veranstaltung Bescheid und wir lösen sie gemeinsam.
+
+* [OS X](#os-x)
+* [Windows](#windows)
+* [Linux](#linux)
+
+<hr />
+
+## OS X
+
+<hr />
+
+## Windows
+
+<hr />
+
+## Linux

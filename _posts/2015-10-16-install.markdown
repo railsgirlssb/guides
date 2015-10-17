@@ -18,10 +18,64 @@ Folge den Instruktionen für dein Betriebssystem. Falls dabei Probleme auftreten
 
 ## OS X
 
-<hr />
 
 ## Windows
 
 <hr />
 
-## Linux
+##Linux
+
+### *1.* Installiere Rails
+
+Um Ruby on Rails in deiner Linux Distribution zu installieren (Ubuntu oder Fedora), kopiere die folgenden Zeilen in dein Terminal und drücke Enter. Schaue dem vorbeiscrollenden Text zu und hole dir optional ein Getränk, da es etwas dauern wird.
+
+#### Ubuntu:
+
+Wenn du das Gnome-Terminal (standard in Ubuntu) verwendest, dann musst du erst eine Einstellung ändern. Wähle im Menü Bearbeiten Profileinstellungen. Wähle den Tab "Titel und Befehl" und aktiviere die option "Befehl als Loginshell starten". Starte danach das Terminal neu. Wenn du wissen willst warum, schaue hier:
+[RVM documentation](http://rvm.io/integration/gnome-terminal).
+
+{% highlight sh %}
+bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
+{% endhighlight %}
+
+#### Fedora:
+
+{% highlight sh %}
+bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
+{% endhighlight %}
+
+Teste das ganze mit dem rails generator:
+
+{% highlight sh %}
+rails new railsgirls
+cd railsgirls
+rails server
+{% endhighlight %}
+
+Sollte dies mit der meldung fehlschlagen, dass Rails nicht installiert ist, versuche folgende kommandos.
+{% highlight sh %}
+rvm use ruby-2.2.2 --default
+gem install rails
+{% endhighlight %}
+
+danach versuche den vorherigen Codeblock erneut.
+
+### *2.* Installiere einen Texteditor
+
+Für den Workshop empfehlen wir folgende Texteditoren
+
+* [Lade Atom herunter](https://atom.io)
+* [Lade Sublime herunter](http://www.sublimetext.com/2)
+
+
+### *3.* Aktualisiere deinen Browser
+
+Führe folgendes Kommando aus:
+
+{% highlight sh %}
+sudo apt-get update
+sudo apt-get upgrade
+{% endhighlight %}
+
+Nun solltest du eine funktionierende Ruby on Rails Umgebung haben.
+<hr />

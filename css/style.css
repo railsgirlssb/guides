@@ -54,11 +54,11 @@ ul li {
 }
 
 a {
-  color: #E0330C;
+  color: #d3360b;
 }
 
 a:hover {
-  color: #E0330C;
+  color: #d3360b;
   text-decoration: underline;
 }
 
@@ -120,12 +120,6 @@ footer {
   text-align: center;
 }
 
-
-footer a {
-  color: #111;
-  border-color: #111;
-}
-
 .indent {
   margin-left: 70px;
 }
@@ -180,7 +174,7 @@ footer a {
 .home h3 {
   margin: 0 0 0.5em;
   margin-left: 90px;
-  color: #E0330C;
+  color: #d3360b;
 }
 
 .home li:hover h3 {
@@ -268,11 +262,11 @@ i.icon-small-browser {
    margin-right:-20px;
    padding-left:20px;
    padding-right:20px;
- } 
+ }
 }
 
 /* Don't show the homepage image on mobile */
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
   .hero {
     padding: 20px 0;
     background:none;

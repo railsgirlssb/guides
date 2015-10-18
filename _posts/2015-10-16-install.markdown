@@ -20,7 +20,7 @@ Folge den Instruktionen für dein Betriebssystem. Falls dabei Probleme auftreten
 
 Für die Installation wird OS X 10.9, 10.10 oder 10.11 benötigt (<a href="https://support.apple.com/de-de/HT201260" target="_blank">OS X-Version auf dem Mac finden</a>).
 
-Zum installieren der Entwicklungsumgebung nutzen wir das Terminal von OS X. Öffne das Terminal-Fenster über <code>/Programme/Dienstprogramme/Terminal</code> oder indem du in Spotlight nach <code>Terminal</code> suchst.
+Zum Installieren der Entwicklungsumgebung nutzen wir das Terminal von OS X. Öffne das Terminal-Fenster über <code>/Programme/Dienstprogramme/Terminal</code> oder indem du in Spotlight nach <code>Terminal</code> suchst.
 
 Kopiere dir die folgenden Zeilen einzeln in das Terminal und bestätige mit der <code>Enter</code> Taste.
 
@@ -118,7 +118,7 @@ Wenn die folgende Ausgabe erscheint, ist Ruby on Rails soweit korrekt aufgesetzt
 Für den Workshop empfehlen wir den Texteditor Atom.
 [Lade Atom herunter und installiere ihn](https://atom.io/download/windows).
 
-Nun solltest du ein funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben. Gratulation!
+Nun solltest du eine funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben. Gratulation!
 
 ### *3.* Aktualisiere deinen Browser (optional)
 

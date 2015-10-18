@@ -18,8 +18,66 @@ Folge den Instruktionen für dein Betriebssystem. Falls dabei Probleme auftreten
 
 ## OS X
 
+<hr />
 
 ## Windows
+
+### *1.* Rails installieren
+
+Lade den [RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.1.0.exe) runter und starte ihn.
+Das Installationsprogramm ist auf Englisch.
+
+Klick dich durch das Installationsprogramm, indem du die Standardoptionen beibehälst.
+
+Im letzten Schritt musst du einen Namen und E-Mail-Adresse in einem Terminalfenster eingeben.
+Gerne kannst du initial auch Pseudodaten angeben.
+
+Lade danach die Datei [ruby-gems-update gem](https://github.com/rubygems/rubygems/releases/download/v2.2.3/rubygems-update-2.2.3.gem) herunter.
+Verschiebe die heruntergeladene Datei im Explorer auf das Laufwerk C: (Lokaler Datenträger).
+
+Die folgenden Befehle werden in einem sog. Terminalfenster ausgeführt.
+Hier musst du eventuell Geduld zeigen, da Daten aus dem Internet runtergeladen werden und das dauern kann.
+
+
+Öffne aus dem Windows-Startmenü *Command Prompt with Ruby on Rails* und führe folgende Befehle aus:
+
+{% highlight sh %}
+gem install --local c:\\rubygems-update-2.2.3.gem
+update_rubygems --no-ri --no-rdoc
+gem uninstall rubygems-update -x
+rm c:\\rubygems-update-2.2.3.gem
+{% endhighlight %}
+
+Anschließend können wir sicherstellen, dass Ruby on Rails korrekt installiert sind, indem wir folgende Befehle im Terminal ausführen:
+{% highlight sh %}
+rails new railsgirls
+cd railsgirls
+rails server
+{% endhighlight %}
+
+
+Wenn die folgende Ausgabe erscheint, ist Ruby on Rails soweit korrekt aufgesetzt:
+{% highlight sh %}
+=> Booting WEBrick
+=> Rails 4.1.8 application starting in development on http://0.0.0.0:3000
+=> Run `rails server -h` for more startup options
+=> Notice: server is listening on all interfaces (0.0.0.0). Consider using 127.0.0.1 (--binding option)
+=> Crtl-C to shutdown server
+[2015-mm-jj HH:MM:SS] INFO WEBrick 1.3.1
+[2015-mm-jj HH:MM:SS] INFO ruby 2.1.5 (2014-11-13) [i386-mingw32]
+[2015-mm-jj HH:MM:SS] INFO WEBrick::HTTPServer#start: pid=xxxx port=3000 
+{% endhighlight %}
+
+### *2.* Installiere einen Texteditor, um Codedateien zu bearbeiten
+
+Für den Workshop empfehlen wir den Texteditor Atom.
+[Lade Atom herunter und installiere ihn](https://atom.io/download/windows).
+
+Nun solltest du ein funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben. Gratulation!
+
+### *3.* Aktualisiere deinen Browser (optional)
+
+Wenn du den Internet Explorer benutzt, empfehlen wir dir [Firefox](mozilla.org/firefox) oder [Google Chrome](google.com/chrome).
 
 <hr />
 

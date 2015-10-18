@@ -61,9 +61,14 @@ gem i rails --no-ri --no-rdoc
 
 ### *7.* Installiere einen Texteditor, um Codedateien zu bearbeiten
 
-Für den Workshop empfehlen wir den kostenlosen Texteditor Atom. <a href="https://atom.io/download/mac" target="_blank">Lade Atom herunter und installiere ihn</a>.
+Für den Workshop empfehlen wir folgende Texteditoren:
+
+* [Lade Atom herunter und installiere ihn](https://atom.io/download/mac).
+* [Lade Sublime Text herunter und installiere ihn](http://www.sublimetext.com/3).
 
 Nun solltest du ein funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben. Gratulation!
+
+<hr />
 
 ## Windows
 
@@ -115,8 +120,10 @@ Wenn die folgende Ausgabe erscheint, ist Ruby on Rails soweit korrekt aufgesetzt
 
 ### *2.* Installiere einen Texteditor, um Codedateien zu bearbeiten
 
-Für den Workshop empfehlen wir den Texteditor Atom.
-[Lade Atom herunter und installiere ihn](https://atom.io/download/windows).
+Für den Workshop empfehlen wir folgende Texteditoren:
+
+* [Lade Atom herunter und installiere ihn](https://atom.io/download/windows).
+* [Lade Sublime Text herunter und installiere ihn](http://www.sublimetext.com/3).
 
 Nun solltest du eine funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben. Gratulation!
 
@@ -163,12 +170,12 @@ gem install rails
 
 danach versuche den vorherigen Codeblock erneut.
 
-### *2.* Installiere einen Texteditor
+### *2.* Installiere einen Texteditor, um Codedateien zu bearbeiten
 
-Für den Workshop empfehlen wir folgende Texteditoren
+Für den Workshop empfehlen wir folgende Texteditoren:
 
-* [Lade Atom herunter](https://atom.io)
-* [Lade Sublime herunter](http://www.sublimetext.com/2)
+* [Lade Atom herunter und installiere ihn](https://atom.io).
+* [Lade Sublime Text herunter und installiere ihn](http://www.sublimetext.com/3).
 
 
 ### *3.* Aktualisiere deinen Browser
@@ -180,5 +187,5 @@ sudo apt-get update
 sudo apt-get upgrade
 {% endhighlight %}
 
-Nun solltest du eine funktionierende Ruby on Rails Umgebung haben.
+Nun solltest du ein funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben. Gratulation!
 <hr />

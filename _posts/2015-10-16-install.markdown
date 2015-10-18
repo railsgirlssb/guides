@@ -18,7 +18,52 @@ Folge den Instruktionen für dein Betriebssystem. Falls dabei Probleme auftreten
 
 ## OS X
 
-<hr />
+Für die Installation wird OS X 10.9, 10.10 oder 10.11 benötigt (<a href="https://support.apple.com/de-de/HT201260" target="_blank">OS X-Version auf dem Mac finden</a>).
+
+Zum Installieren der Entwicklungsumgebung nutzen wir das Terminal von OS X. Öffne das Terminal-Fenster über <code>/Programme/Dienstprogramme/Terminal</code> oder indem du in Spotlight nach <code>Terminal</code> suchst.
+
+Kopiere dir die folgenden Zeilen einzeln in das Terminal und bestätige mit der <code>Enter</code> Taste.
+
+### *1.* Installiere die Kommandozeilenwerkzeuge mit Terminal
+{% highlight sh %}
+xcode-select --install
+{% endhighlight %}
+Bestätige alle Dialoge. Eventuell musst du dabei dein Passwort eingeben.
+
+### *2.* Installiere <a href="http://brew.sh/" target="_blank">Homebrew</a>
+Homebrew installiert für dich Sachen, die du brauchst und die nicht bei OS X dabei sind.
+
+{% highlight sh %}
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+{% endhighlight %}
+
+### *3.* Installiere <a href="https://github.com/sstephenson/rbenv" target="_blank">rbenv</a>
+Mit rbenv kannst du Ruby auf deinem Mac installieren und verwalten.
+{% highlight sh %}
+brew update
+brew install rbenv rbenv-gem-rehash ruby-build
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
+{% endhighlight %}
+
+### *4.* Installiere Ruby mit rbenv
+{% highlight sh %}
+rbenv install 2.2.3
+rbenv global 2.2.3
+{% endhighlight %}
+
+
+### *6.* Installiere <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a>
+{% highlight sh %}
+gem i rails --no-ri --no-rdoc
+{% endhighlight %}
+
+### *7.* Installiere einen Texteditor, um Codedateien zu bearbeiten
+
+Für den Workshop empfehlen wir den kostenlosen Texteditor Atom. <a href="https://atom.io/download/mac" target="_blank">Lade Atom herunter und installiere ihn</a>.
+
+Nun solltest du ein funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben. Gratulation!
 
 ## Windows
 
@@ -65,7 +110,7 @@ Wenn die folgende Ausgabe erscheint, ist Ruby on Rails soweit korrekt aufgesetzt
 => Crtl-C to shutdown server
 [2015-mm-jj HH:MM:SS] INFO WEBrick 1.3.1
 [2015-mm-jj HH:MM:SS] INFO ruby 2.1.5 (2014-11-13) [i386-mingw32]
-[2015-mm-jj HH:MM:SS] INFO WEBrick::HTTPServer#start: pid=xxxx port=3000 
+[2015-mm-jj HH:MM:SS] INFO WEBrick::HTTPServer#start: pid=xxxx port=3000
 {% endhighlight %}
 
 ### *2.* Installiere einen Texteditor, um Codedateien zu bearbeiten
@@ -73,7 +118,7 @@ Wenn die folgende Ausgabe erscheint, ist Ruby on Rails soweit korrekt aufgesetzt
 Für den Workshop empfehlen wir den Texteditor Atom.
 [Lade Atom herunter und installiere ihn](https://atom.io/download/windows).
 
-Nun solltest du ein funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben. Gratulation!
+Nun solltest du eine funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben. Gratulation!
 
 ### *3.* Aktualisiere deinen Browser (optional)
 

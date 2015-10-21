@@ -133,15 +133,20 @@ Wenn du den Internet Explorer benutzt, empfehlen wir dir [Firefox](mozilla.org/f
 
 <hr />
 
-##Linux
+## Linux
 
 ### *1.* Installiere Rails
 
-Um Ruby on Rails in deiner Linux Distribution zu installieren (Ubuntu oder Fedora), kopiere die folgenden Zeilen in dein Terminal und drücke Enter. Schaue dem vorbeiscrollenden Text zu und hole dir optional ein Getränk, da es etwas dauern wird.
+Um Ruby on Rails in deiner Linux Distribution zu installieren (Ubuntu oder Fedora), kopiere die folgenden Zeilen in dein Terminal und bestätige mit Enter.
+Schaue dem vorbeiscrollenden Text zu und hole dir optional ein Getränk, da es etwas dauern wird.
 
 #### Ubuntu:
 
-Wenn du das Gnome-Terminal (standard in Ubuntu) verwendest, dann musst du erst eine Einstellung ändern. Wähle im Menü Bearbeiten Profileinstellungen. Wähle den Tab "Titel und Befehl" und aktiviere die option "Befehl als Loginshell starten". Starte danach das Terminal neu. Wenn du wissen willst warum, schaue hier:
+Wenn du das Gnome-Terminal (Standard in Ubuntu) verwendest, dann musst du erst eine Einstellung ändern.
+Wähle im Menü Bearbeiten Profileinstellungen.
+Wähle den Tab "Titel und Befehl" und aktiviere die Option "Befehl als Loginshell starten".
+Starte danach das Terminal neu.
+Wenn du wissen willst warum, schaue hier:
 [RVM documentation](http://rvm.io/integration/gnome-terminal).
 
 {% highlight sh %}
@@ -154,7 +159,7 @@ bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
 {% endhighlight %}
 
-Teste das ganze mit dem rails generator:
+Teste das ganze mit den folgenden Befehlen:
 
 {% highlight sh %}
 rails new railsgirls
@@ -162,13 +167,13 @@ cd railsgirls
 rails server
 {% endhighlight %}
 
-Sollte dies mit der meldung fehlschlagen, dass Rails nicht installiert ist, versuche folgende kommandos.
+Sollte dies mit der Meldung fehlschlagen, dass Rails nicht installiert ist, versuche folgende Kommandos:
 {% highlight sh %}
 rvm use ruby-2.2.2 --default
 gem install rails
 {% endhighlight %}
 
-danach versuche den vorherigen Codeblock erneut.
+Danach versuche den vorherigen Codeblock erneut.
 
 ### *2.* Installiere einen Texteditor, um Codedateien zu bearbeiten
 

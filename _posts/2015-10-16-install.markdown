@@ -8,11 +8,21 @@ permalink: install
 
 Um Web Apps und andere Dinge mit Ruby on Rails zu bauen, müssen wir Software installieren und die Entwicklungsumgebung auf deinem Rechner einrichten.
 
-Folge den Instruktionen für dein Betriebssystem. Falls dabei Probleme auftreten sollten, keine Sorge, gib uns einfach bei der Veranstaltung Bescheid und wir lösen sie gemeinsam.
+Folge den Instruktionen für dein Betriebssystem. Falls dabei Probleme auftreten sollten, keine Sorge, gib uns bitte via <a href="mailto:railsgirlssb@gmail.com">E-Mail</a> Bescheid und wir lösen die Probleme gemeinsam.
+Eventuell können dir auch Freune/Freundinnen mit deinem Problem helfen.
+
+Es ist wichtig, dass möglichst viele Teilnehmerinnen am Veranstaltungstag die Installation hinter sich haben, damit es zu keinen größeren Verzögerungen im Programmablauf kommt.
+
+In den folgenden Abschnitten sind Anleitungen für die bekanntesten Betriebssysteme aufgeführt.
 
 * [OS X](#os-x)
 * [Windows](#windows)
 * [Linux](#linux)
+
+Einzelne Schritte der Anleitung können länger dauern, da Software zunächst aus dem Internet runtergeladen werden muss und es eventuell keinen Fortschrittsbalken oder ähnlich gibt.
+Manchmal kommt auf viel kryptische Ausgabe. Das soll zunächst auch niemanden beunruhigen.
+
+Falls die Anleitung auf dein Betriebssystem nicht zutrifft, melde dich bitte bei uns, damit wir da gemeinsam durchsteigen.
 
 <hr />
 
@@ -100,8 +110,8 @@ rm c:\\rubygems-update-2.2.3.gem
 
 Anschließend können wir sicherstellen, dass Ruby on Rails korrekt installiert sind, indem wir folgende Befehle im Terminal ausführen:
 {% highlight sh %}
-rails new railsgirls
-cd railsgirls
+rails new railstest
+cd railstest
 rails server
 {% endhighlight %}
 
@@ -117,6 +127,10 @@ Wenn die folgende Ausgabe erscheint, ist Ruby on Rails soweit korrekt aufgesetzt
 [2015-mm-jj HH:MM:SS] INFO ruby 2.1.5 (2014-11-13) [i386-mingw32]
 [2015-mm-jj HH:MM:SS] INFO WEBrick::HTTPServer#start: pid=xxxx port=3000
 {% endhighlight %}
+
+Gib anschließend die Tastenkombination <code>STRG + C</code> ein und bestätige die daraufflogende Frage mit <code><J/code>.
+
+Du kannst nun das Terminalfenster schließen.
 
 ### *2.* Installiere einen Texteditor, um Codedateien zu bearbeiten
 

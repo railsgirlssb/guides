@@ -6,46 +6,49 @@ permalink: install
 
 # Installation von Ruby on Rails
 
-Um Web Apps und andere Dinge mit Ruby on Rails zu bauen, müssen wir Software installieren und die Entwicklungsumgebung auf deinem Rechner einrichten.
+Um Web Apps und andere Dinge mit Ruby on Rails erstellen zu können, müssen wir Software installieren und die Entwicklungsumgebung auf deinem Rechner einrichten.
 
-Folge den Instruktionen für dein Betriebssystem. Falls dabei Probleme auftreten sollten, keine Sorge, gib uns bitte via <a href="mailto:railsgirlssb@gmail.com">E-Mail</a> Bescheid und wir lösen die Probleme gemeinsam.
-Eventuell können dir auch Freune/Freundinnen mit deinem Problem helfen.
+Folge den Instruktionen für dein Betriebssystem. Falls dabei Probleme auftreten sollten, helfen wir dir gerne weiter. Schreib uns die Fehlermeldung oder dein Problem via <a href="mailto:railsgirlssb@gmail.com">E-Mail</a>.
 
 Es ist wichtig, dass möglichst viele Teilnehmerinnen am Veranstaltungstag die Installation hinter sich haben, damit es zu keinen größeren Verzögerungen im Programmablauf kommt.
 
-In den folgenden Abschnitten sind Anleitungen für die bekanntesten Betriebssysteme aufgeführt.
+In den folgenden Abschnitten sind Anleitungen für die bekanntesten Betriebssysteme aufgeführt:
 
 * [OS X](#os-x)
 * [Windows](#windows)
 * [Linux](#linux)
 
-Einzelne Schritte der Anleitung können länger dauern, da Software zunächst aus dem Internet runtergeladen werden muss und es eventuell keinen Fortschrittsbalken oder ähnlich gibt.
-Manchmal kommt auf viel kryptische Ausgabe. Das soll zunächst auch niemanden beunruhigen.
+Einzelne Schritte der Anleitung können länger dauern, da zuerst Dateien aus dem Internet runtergeladen werden müssen und es eventuell keinen Fortschrittsbalken oder ähnliches gibt.
 
-Falls die Anleitung auf dein Betriebssystem nicht zutrifft, melde dich bitte bei uns, damit wir da gemeinsam durchsteigen.
+Falls die Anleitung auf dein Betriebssystem nicht zutrifft, melde dich bitte bei uns, damit wir gemeinsam eine Lösung finden.
+
 
 <hr />
+
 
 ## OS X
 
 Für die Installation wird OS X 10.9, 10.10 oder 10.11 benötigt (<a href="https://support.apple.com/de-de/HT201260" target="_blank">OS X-Version auf dem Mac finden</a>).
 
-Zum Installieren der Entwicklungsumgebung nutzen wir das Terminal von OS X. Öffne das Terminal-Fenster über <code>/Programme/Dienstprogramme/Terminal</code> oder indem du in Spotlight nach <code>Terminal</code> suchst.
+Zum Installieren der Entwicklungsumgebung nutzen wir das Terminal. Öffne das Terminal über <code>/Programme/Dienstprogramme/Terminal</code> oder indem du mithilfe Spotlight nach <code>Terminal</code> suchst.
 
-Kopiere dir die folgenden Zeilen einzeln in das Terminal und bestätige mit der <code>Enter</code> Taste.
+Die folgenden Abschnitte enthalten Befehle für das Terminal. Hierbei muss darauf geachtet werden, dass jede Zeile einzeln eingegeben und mit der <code>Enter</code> Taste bestätigt wird.
 
-### *1.* Installiere die Kommandozeilenwerkzeuge mit Terminal
+
+### *1.* Installiere die Kommandozeilenwerkzeuge
 {% highlight sh %}
 xcode-select --install
 {% endhighlight %}
-Bestätige alle Dialoge. Eventuell musst du dabei dein Passwort eingeben.
+Bestätige dabei alle Dialoge. Eventuell musst du dabei dein Passwort eingeben.
+
 
 ### *2.* Installiere <a href="http://brew.sh/" target="_blank">Homebrew</a>
-Homebrew installiert für dich Sachen, die du brauchst und die nicht bei OS X dabei sind.
+Homebrew installiert Sachen, die du brauchst und die nicht bei OS X dabei sind.
 
 {% highlight sh %}
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 {% endhighlight %}
+
 
 ### *3.* Installiere <a href="https://github.com/sstephenson/rbenv" target="_blank">rbenv</a>
 Mit rbenv kannst du Ruby auf deinem Mac installieren und verwalten.
@@ -57,6 +60,7 @@ echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 {% endhighlight %}
 
+
 ### *4.* Installiere Ruby mit rbenv
 {% highlight sh %}
 rbenv install 2.2.3
@@ -64,62 +68,24 @@ rbenv global 2.2.3
 {% endhighlight %}
 
 
-### *6.* Installiere <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a>
+### *5.* Installiere <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a>
 {% highlight sh %}
 gem i rails --no-ri --no-rdoc
 {% endhighlight %}
 
-### *7.* Installiere einen Texteditor, um Codedateien zu bearbeiten
 
-Für den Workshop empfehlen wir folgende Texteditoren:
-
-* [Lade Atom herunter und installiere ihn](https://atom.io/download/mac).
-* [Lade Sublime Text herunter und installiere ihn](http://www.sublimetext.com/3).
-
-Nun solltest du ein funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben. Gratulation!
-
-<hr />
-
-## Windows
-
-### *1.* Rails installieren
-
-Lade den [RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.1.0.exe) runter und starte ihn.
-Das Installationsprogramm ist auf Englisch.
-
-Klick dich durch das Installationsprogramm, indem du die Standardoptionen beibehälst.
-
-Im letzten Schritt musst du einen Namen und E-Mail-Adresse in einem Terminalfenster eingeben.
-Gerne kannst du initial auch Pseudodaten angeben.
-
-Lade danach die Datei [ruby-gems-update gem](https://github.com/rubygems/rubygems/releases/download/v2.2.3/rubygems-update-2.2.3.gem) herunter.
-Verschiebe die heruntergeladene Datei im Explorer auf das Laufwerk C: (Lokaler Datenträger).
-
-Die folgenden Befehle werden in einem sog. Terminalfenster ausgeführt.
-Hier musst du eventuell Geduld zeigen, da Daten aus dem Internet runtergeladen werden und das dauern kann.
-
-
-Öffne aus dem Windows-Startmenü *Command Prompt with Ruby on Rails* und führe folgende Befehle aus:
-
-{% highlight sh %}
-gem install --local c:\\rubygems-update-2.2.3.gem
-update_rubygems --no-ri --no-rdoc
-gem uninstall rubygems-update -x
-rm c:\\rubygems-update-2.2.3.gem
-{% endhighlight %}
-
-Anschließend können wir sicherstellen, dass Ruby on Rails korrekt installiert sind, indem wir folgende Befehle im Terminal ausführen:
+### *6.* Teste die Installation
+Wir erstellen nun ein Testprojekt, um die Installation zu prüfen:
 {% highlight sh %}
 rails new railstest
 cd railstest
 rails server
 {% endhighlight %}
 
-
-Wenn die folgende Ausgabe erscheint, ist Ruby on Rails soweit korrekt aufgesetzt:
+Wenn die folgende Ausgabe erscheint, war die Installation von Ruby on Rails erfolgreich:
 {% highlight sh %}
 => Booting WEBrick
-=> Rails 4.1.8 application starting in development on http://0.0.0.0:3000
+=> Rails 4.x.x application starting in development on http://0.0.0.0:3000
 => Run `rails server -h` for more startup options
 => Notice: server is listening on all interfaces (0.0.0.0). Consider using 127.0.0.1 (--binding option)
 => Crtl-C to shutdown server
@@ -128,83 +94,189 @@ Wenn die folgende Ausgabe erscheint, ist Ruby on Rails soweit korrekt aufgesetzt
 [2015-mm-jj HH:MM:SS] INFO WEBrick::HTTPServer#start: pid=xxxx port=3000
 {% endhighlight %}
 
-Gib anschließend die Tastenkombination <code>STRG + C</code> ein und bestätige die daraufflogende Frage mit <code><J/code>.
+Gib anschließend die Tastenkombination <code>STRG + C</code> ein. Danach kannst du das Terminal schließen.
 
-Du kannst nun das Terminalfenster schließen.
 
-### *2.* Installiere einen Texteditor, um Codedateien zu bearbeiten
+### *7.* Installiere einen Texteditor, um Codedateien zu bearbeiten
 
 Für den Workshop empfehlen wir folgende Texteditoren:
 
-* [Lade Atom herunter und installiere ihn](https://atom.io/download/windows).
-* [Lade Sublime Text herunter und installiere ihn](http://www.sublimetext.com/3).
+* [Lade Atom herunter und installiere ihn](https://atom.io/download/mac)
+* [Lade Sublime Text herunter und installiere ihn](http://www.sublimetext.com/3)
 
-Nun solltest du eine funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben. Gratulation!
 
-### *3.* Aktualisiere deinen Browser (optional)
+### *8.* Browserhinweise
 
-Wenn du den Internet Explorer benutzt, empfehlen wir dir [Firefox](mozilla.org/firefox) oder [Google Chrome](google.com/chrome).
+Für die Webentwicklung empfehlen wir dir [Firefox](mozilla.org/firefox) oder [Google Chrome](google.com/chrome) zu benutzen.
+
+Optional kannst du deinen Browser auch noch aktualisieren.
+
+
+### Gratulation!
+Du solltest nun eine funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben.
+
 
 <hr />
 
+
+## Windows
+
+Zum Installieren der Entwicklungsumgebung nutzen wir eine Installationsdatei.
+
+
+### *1.* Installiere <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a>
+
+Lade den [RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.1.0.exe) runter und starte ihn (das Installationsprogramm ist auf Englisch).
+
+Klick dich durch das Installationsprogramm, indem du die Standardoptionen beibehälst.
+
+Im letzten Schritt öffnet sich automatisch ein Terminal, in das du einen Namen und eine E-Mail-Adresse eingeben musst.
+Gerne kannst du initial auch Pseudodaten angeben. Danach kannst du das Terminal schließen.
+
+
+### *2.* Installiere wichtige Aktualisierungen
+
+Lade die Datei [rubygems-update.gem](https://github.com/rubygems/rubygems/releases/download/v2.2.3/rubygems-update-2.2.3.gem) herunter.
+Verschiebe die heruntergeladene Datei im Explorer auf das Laufwerk C: (Lokaler Datenträger).
+
+Öffne aus dem Windows-Startmenü <code>Command Prompt with Ruby on Rails</code> und führe folgende Befehle einzeln aus:
+
+{% highlight sh %}
+gem install --local c:\\rubygems-update-2.2.3.gem
+update_rubygems --no-ri --no-rdoc
+gem uninstall rubygems-update -x
+rm c:\\rubygems-update-2.2.3.gem
+{% endhighlight %}
+
+
+### *3.* Teste die Installation
+Wir erstellen nun ein Testprojekt, um die Installation zu prüfen:
+{% highlight sh %}
+rails new railstest
+cd railstest
+rails server
+{% endhighlight %}
+
+Wenn die folgende Ausgabe erscheint, war die Installation von Ruby on Rails erfolgreich:
+{% highlight sh %}
+=> Booting WEBrick
+=> Rails 4.x.x application starting in development on http://0.0.0.0:3000
+=> Run `rails server -h` for more startup options
+=> Notice: server is listening on all interfaces (0.0.0.0). Consider using 127.0.0.1 (--binding option)
+=> Crtl-C to shutdown server
+[2015-mm-jj HH:MM:SS] INFO WEBrick 1.3.1
+[2015-mm-jj HH:MM:SS] INFO ruby 2.1.5 (2014-11-13) [i386-mingw32]
+[2015-mm-jj HH:MM:SS] INFO WEBrick::HTTPServer#start: pid=xxxx port=3000
+{% endhighlight %}
+
+Gib anschließend die Tastenkombination <code>STRG + C</code> ein und bestätige die darauffolgende Frage mit <code>J</code>.
+
+Danach kannst du das Terminal schließen.
+
+
+### *4.* Installiere einen Texteditor, um Codedateien zu bearbeiten
+
+Für den Workshop empfehlen wir folgende Texteditoren:
+
+* [Lade Atom herunter und installiere ihn](https://atom.io/download/windows)
+* [Lade Sublime Text herunter und installiere ihn](http://www.sublimetext.com/3)
+
+
+### *5.* Browserhinweise
+
+Für die Webentwicklung empfehlen wir dir [Firefox](mozilla.org/firefox) oder [Google Chrome](google.com/chrome) zu benutzen.
+
+Optional kannst du deinen Browser auch noch aktualisieren.
+
+
+### Gratulation!
+Du solltest nun eine funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben.
+
+
+<hr />
+
+
 ## Linux
 
-### *1.* Installiere Rails
+Zum Installieren der Entwicklungsumgebung nutzen wir das Terminal.
 
-Um Ruby on Rails in deiner Linux Distribution zu installieren (Ubuntu oder Fedora), kopiere die folgenden Zeilen in dein Terminal und bestätige mit Enter.
-Schaue dem vorbeiscrollenden Text zu und hole dir optional ein Getränk, da es etwas dauern wird.
 
-#### Ubuntu:
+### *1.* Installiere <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a>
 
-Wenn du das Gnome-Terminal (Standard in Ubuntu) verwendest, dann musst du erst eine Einstellung ändern.
-Wähle im Menü Bearbeiten Profileinstellungen.
-Wähle den Tab "Titel und Befehl" und aktiviere die Option "Befehl als Loginshell starten".
+
+#### *1a.*  Ubuntu
+
+Wenn du das Gnome-Terminal (Standard in Ubuntu) verwendest, dann musst du erst eine Einstellung ändern:
+
+Wähle im Menü <code>Bearbeiten</code> <code>Profileinstellungen</code>.
+Wähle den Tab <code>Titel und Befehl</code> und aktiviere die Option <code>Befehl als Loginshell starten</code>.
 Starte danach das Terminal neu.
 Wenn du wissen willst warum, schaue hier:
 [RVM documentation](http://rvm.io/integration/gnome-terminal).
 
+
+Kopiere die folgende Zeile in dein Terminal und bestätige mit <code>Enter</code>:
 {% highlight sh %}
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
 {% endhighlight %}
 
-#### Fedora:
 
+#### *1b.*  Fedora
+
+Kopiere die folgende Zeile in dein Terminal und bestätige mit <code>Enter</code>:
 {% highlight sh %}
 bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
 {% endhighlight %}
 
-Teste das ganze mit den folgenden Befehlen:
 
+### *2.* Teste die Installation
+Wir erstellen nun ein Testprojekt, um die Installation zu prüfen:
 {% highlight sh %}
-rails new railsgirls
-cd railsgirls
+rails new railstest
+cd railstest
 rails server
 {% endhighlight %}
 
-Sollte dies mit der Meldung fehlschlagen, dass Rails nicht installiert ist, versuche folgende Kommandos:
+Wenn die folgende Ausgabe erscheint, war die Installation von Ruby on Rails erfolgreich:
+{% highlight sh %}
+=> Booting WEBrick
+=> Rails 4.x.x application starting in development on http://0.0.0.0:3000
+=> Run `rails server -h` for more startup options
+=> Notice: server is listening on all interfaces (0.0.0.0). Consider using 127.0.0.1 (--binding option)
+=> Crtl-C to shutdown server
+[2015-mm-jj HH:MM:SS] INFO WEBrick 1.3.1
+[2015-mm-jj HH:MM:SS] INFO ruby 2.1.5 (2014-11-13) [i386-mingw32]
+[2015-mm-jj HH:MM:SS] INFO WEBrick::HTTPServer#start: pid=xxxx port=3000
+{% endhighlight %}
+
+Gib anschließend die Tastenkombination <code>STRG + C</code> ein. Danach kannst du das Terminal schließen.
+
+
+#### Mögliche Fehlerbehebung
+
+Solltest du die Meldung bekommen, dass Rails nicht installiert ist, dann kopiere die folgenden Zeilen einzeln in dein Terminal:
 {% highlight sh %}
 rvm use ruby-2.2.2 --default
 gem install rails
 {% endhighlight %}
 
-Danach versuche den vorherigen Codeblock erneut.
+Versuche danach den Abschnitt "2. Teste die Installation" erneut durchzuführen.
 
-### *2.* Installiere einen Texteditor, um Codedateien zu bearbeiten
+
+### *3.* Installiere einen Texteditor, um Codedateien zu bearbeiten
 
 Für den Workshop empfehlen wir folgende Texteditoren:
 
-* [Lade Atom herunter und installiere ihn](https://atom.io).
-* [Lade Sublime Text herunter und installiere ihn](http://www.sublimetext.com/3).
+* [Lade Atom herunter und installiere ihn](https://atom.io)
+* [Lade Sublime Text herunter und installiere ihn](http://www.sublimetext.com/3)
 
 
-### *3.* Aktualisiere deinen Browser
+### *4.* Browserhinweise
 
-Führe folgendes Kommando aus:
+Für die Webentwicklung empfehlen wir dir [Firefox](mozilla.org/firefox) oder [Google Chrome](google.com/chrome) zu benutzen.
 
-{% highlight sh %}
-sudo apt-get update
-sudo apt-get upgrade
-{% endhighlight %}
+Optional kannst du deinen Browser auch noch aktualisieren.
 
-Nun solltest du ein funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben. Gratulation!
-<hr />
+
+### Gratulation!
+Du solltest nun eine funktionierende Ruby on Rails Programmierumgebung zur Verfügung haben.

@@ -79,7 +79,6 @@ header {
 }
 
 header #logo {
-  width: 240px;
   float: left;
 }
 
@@ -199,6 +198,9 @@ footer {
 .hero {
   padding: 20px 320px 20px 0;
   background: url(../images/guides-hero.png) right 80px no-repeat;
+}
+.hero h1 {
+  line-height: 1.25;
 }
 .highlight {
   margin-left: 40px;

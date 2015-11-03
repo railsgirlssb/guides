@@ -1,15 +1,10 @@
 ---
 layout: default
-title: Rails Girls App Tutorial
+title: App Tutorial
 permalink: app
 ---
 
-# Rails Girls App Tutorial
-
-*Created by Vesa Vänskä, [@vesan](https://twitter.com/vesan)*
-
-**Make sure you have Rails installed.** [**Follow the installation guide**](/install) to get set up.
-
+# Anleitung zum Bauen deiner ersten Ruby on Rails App
 
 ## Get to know the tools
 
@@ -17,73 +12,51 @@ permalink: app
 
 <h3><i class="icon-text-editor">&nbsp;</i></h3>
 
-### Text Editor
+### Texteditor
 
-* [Atom](https://atom.io/), [Sublime Text](http://www.sublimetext.com),  Vim and Emacs are examples of text editors your can use for writing code and editing files.
+* [Atom](https://atom.io/) und [Sublime Text](http://www.sublimetext.com) sind Beispiele für Texteditoren. die man für das Schreiben von Code und zum Editieren von Dateien nutzen kann.
 
 <h3><i class="icon-prompt">&nbsp;</i></h3>
 
-### Terminal (known as Command Prompt on Windows)
+### Terminal
 
-* Where you start the rails server and run commands.
+* Im Terminal starten wir einen Rails Webserver und führen Befehle aus.
 
 <h3><i class="icon-browser">&nbsp;</i></h3>
 
-### Web browser
+### Webbrowser
 
-* (Firefox, Safari, Chrome) for viewing your application.
+* Wir können Firefox, Safari oder Chrome benutzen, um unsere Anwendung zu betrachten.
 
 </div>
 
 ### Important
 
-It is important that you select the instructions specific to your operating system - the commands you need to run on a Windows computer are slightly different to Mac or Linux. If you're having trouble check the Operating System switcher at the bottom of the commands. In case you're using a cloud service (e.g. nitrous), you need to run the Linux commands even if you are on a Windows computer.
+Es ist wichtig, dass du die Instruktionen für dein Betriebssystem auswählst.
+Die Befehle, die man unter Windows ausführt, unterscheiden sich leicht von der Mac- oder Linux-Version der Befehle.
 
-## *1.*Creating the application
+## *1.* Die Anwendung erstellen
 
-We're going to create a new Rails app called *railsgirls*.
-
-First, let's open a terminal:
-
-* Mac OS X: Open Spotlight, type *Terminal* and click the *Terminal* application.
-* Windows: Click Start and look for *Command Prompt*, then click *Command Prompt with Ruby on Rails*.
-* Linux (Ubuntu/Fedora): Search for *Terminal* on the dash and click *Terminal*.
-* Cloud service (e.g. nitrous): Log in to your account, start your box and switch to its IDE (see [installation guide](/install#using-a-cloud-service) for details). The terminal is usually at the bottom of your browser window.
-
-Next, type these commands in the terminal:
+Wir geben unserer neuen Rails Anwendung den Namen *railsgirls*.
+Hierzu führen wir den folgenden Befehl im Terminal aus:
 
 <div class="os-specific">
   <div class="nix">
 {% highlight sh %}
-mkdir projects
-{% endhighlight %}
-
-    <div>
-<p>You can verify that a directory named <code>projects</code> was created by running the list command: <code>ls</code>. You should see the <code>projects</code> directory in the output. Now you want to change the directory you are currently in to the <code>projects</code> folder by running:</p>
-    </div>
-
-{% highlight sh %}
-cd projects
-{% endhighlight %}
-
-    <div>
-<p>You can verify you are now in an empty directory or folder by again running the <code>ls</code> command. Now you want to create a new app called <code>railsgirls</code> by running:</p>
-    </div>
-
-{% highlight sh %}
 rails new railsgirls
 {% endhighlight %}
-
     <div>
-<p>This will create a new app in the folder <code>railsgirls</code>, so we again want to change the directory to be inside of our rails app by running:</p>
+      <p>
+      Es wird eine neue Anwendung im Verzeichnis <code>railsgirls</code> generiert.
+      Wir können in das Verzeichnis mit Hilfe des folgenden Befehls wechseln:
+      </p>
     </div>
 
 {% highlight sh %}
 cd railsgirls
 {% endhighlight %}
-
     <div>
-<p>If you run <code>ls</code> inside of the directory you should see folders such as <code>app</code> and <code>config</code>. You can then start the rails server by running:</p>
+<p>Anschließend starten wir den Rails Webserver:</p>
     </div>
 
 {% highlight sh %}
@@ -92,22 +65,6 @@ rails server
   </div>
 
   <div class="win">
-{% highlight sh %}
-mkdir projects
-{% endhighlight %}
-
-    <div>
-<p>You can verify that a directory named <code>projects</code> was created by running the list command: <code>dir</code>. You should see the <code>projects</code> directory in the output. Now you want to change the directory you are currently in to the <code>projects</code> folder by running:</p>
-    </div>
-
-{% highlight sh %}
-cd projects
-{% endhighlight %}
-
-    <div>
-<p>You can verify you are now in an empty directory or folder by again running the <code>dir</code> command. Now you want to create a new app called <code>railsgirls</code> by running:</p>
-    </div>
-
 {% highlight sh %}
 rails new railsgirls
 {% endhighlight %}

@@ -106,11 +106,11 @@ rails server
 
 
 
-## *2.* Erstelle das Ideen Grundgerüst
+## *2.* Erstelle das Ideen-Grundgerüst
 
 Wir generieren nun mit Hilfe der Rails Scaffold Funktion ein Grundgerüst. Mit diesem können wir Dinge (hier Ideen), auflisten, hinzufügen, löschen, bearbeiten und anschauen.
 
-Um das Ideen Grundgerüst zu erstellen, führen wir den folgenden Befehl aus:
+Um das Ideen-Grundgerüst zu erstellen, führen wir den folgenden Befehl aus:
 
 {% highlight sh %}
 rails generate scaffold idea name:string description:text picture:string
@@ -154,10 +154,11 @@ Klicke etwas herum, um zu testen was du mit den wenigen Befehlen erstellt hast.
 
 * Wie hängen HTML und Rails zusammen?
 * Welcher Teil der Views ist HTML und welcher ist Embedded Ruby (ERB)?
-* Was ist MVC und wie hängt das alles zusammen? (Models und Controllers sind für die Generierung der HTML Views zuständig.)
+* Was ist MVC und wie hängt das alles zusammen? (Strukturierung von Code; Models und Controllers sind für die Generierung der HTML Views zuständig.)
 
 Als nächstes kümmern wir uns um ein schöneres Aussehen unserer Applikation.
-Dazu verwenden wir Twitter Bootstrap.
+Dazu verwenden wir Twitter Bootstrap. Twitter Bootstrap ist ein CSS-Framework.
+Es enthält Vorlagen für Formulare, Buttons, Navigationselemente, usw..
 
 Öffne `app/views/layouts/application.html.erb` in deinem Texteditor und über die Zeile:
 
@@ -186,7 +187,7 @@ mit:
 </div>
 {% endhighlight %}
 
-Nun fügen wir noch eine Navigation und eine Fussleiste zum Layout hinzu. Dies machen wir in der selben Datei, indem wir unter `<body>` folgendes hinzufügen:
+Nun fügen wir noch eine Navigation und eine Fußleiste zum Layout hinzu. Dies machen wir in der selben Datei, indem wir unter `<body>` folgendes hinzufügen:
 
 {% highlight html %}
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -242,7 +243,8 @@ Du kannst auch gerne noch weiter das HTML und CSS verändern.
 
 ## *4.* Füge das Hochladen von Bildern hinzu
 
-Um in Rails Bilder hochladen zu können, müssen wir noch eine Software installieren.
+Wir wollen den Ideen in unserer Application noch Bilder anfügen.
+Um in Rails Bilder hochladen zu können, müssen wir noch eine Bibliothek installieren.
 
 **Mögliche Fragen an deinen Coach:**
 
@@ -316,7 +318,7 @@ in folgendes:
 
 Erstelle nun eine neue Idee und lade ein Bild dazu in deinem Browser hoch.
 Nach dem Speichern siehst du jedoch kein Bild, sondern nur den Pfad zum Bild.
-Um dies zu ändern öffnen wir `app/views/ideas/show.html.erb` und ändern:
+Um dies zu ändern, öffnen wir `app/views/ideas/show.html.erb` und ändern:
 
 {% highlight erb %}
 <%= @idea.picture %>
@@ -338,7 +340,7 @@ Lade nun die Seite in deinem Browser neu und betrachte die Änderung.
 
 ## *5.* Passe die Routen an
 
-Öffne <http://localhost:3000> und du sieht immer noch die "Welcome aboard" Seite. Wir erstellen nun eine Weiterleitung zur Ideen Seite.
+Öffne <http://localhost:3000> und du sieht immer noch die "Welcome aboard" Seite. Wir erstellen nun eine Weiterleitung zur Ideen-Seite.
 
 Öffne `config/routes.rb` und füge nach der ersten Zeile folgendes hinzu:
 
@@ -354,7 +356,7 @@ Teste die Änderung, in dem du den Rootpfad (<http://localhost:3000/>) im Browse
 
 ## Erstelle eine statische Seite in deiner App
 
-Als Letztes erstellen wir eine statische Seite in unserer Applikation, die Informationen über dich (des Autors) beinhaltet.
+Als Letztes erstellen wir eine statische Seite in unserer Applikation, die Informationen über dich (den Autor der Seite) beinhaltet.
 
 {% highlight sh %}
 rails generate controller pages info

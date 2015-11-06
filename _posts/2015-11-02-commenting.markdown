@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Web-App um Kommentarfunktion erweitern
+title: Web App um Kommentarfunktion erweitern
 permalink: commenting
 ---
 
-# Web-App um Kommentarfunktion erweitern
+# Web App um Kommentarfunktion erweitern
 
-Wir werden nun die zuvor gebaute Web-App erweitern, indem man Kommentare zu Ideen erstellen kann.
+Wir werden nun die zuvor gebaute Web App erweitern, indem man Kommentare zu Ideen erstellen kann.
 
 
 
@@ -134,8 +134,8 @@ In der Datei `app/controllers/ideas_controller.rb` fügen wir in die `show` Meth
 Öffne nun eine beliebige Idee unter <http://localhost:3000/ideas> in deinem Browser. Dort solltest du ein Formular finden um einen Kommentar zu erstellen sowie eine Auflistung von erstellten Kommentare, die auch gelöscht werden können.
 
 
-## Erweiterung der Web-App abgeschlossen
+## Erweiterung der Web App abgeschlossen
 
-Gratulation, du hast deine Web-App um eine Funktionalität erweitert!
+Gratulation, du hast deine Web App um eine Funktionalität erweitert!
 
 Gehe auf die Übersichtsseite (<http://guides.railsgirlssb.de>) zurück, um weiter an deiner Applikation zu arbeiten.

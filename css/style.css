@@ -15,6 +15,7 @@ h1 {
   font-weight: normal;
   font-size: 3em;
   margin: 0.5em 0 1em;
+  padding-top: 20px;
 }
 
 h2 {
@@ -72,14 +73,30 @@ table {
 }
 
 header {
-  height: 70px;
   color: #fff;
-  padding-top: 50px;
+  padding: 15px 0;
   background: #d3360b;
 }
 
 header #logo {
+  width: 140px;
   float: left;
+}
+
+header a {
+  color: #fff;
+  float: left;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+header .links {
+  margin-left: 200px;
 }
 
 nav {
@@ -196,7 +213,7 @@ footer {
 }
 
 .hero {
-  padding: 20px 320px 20px 0;
+  padding: 0 320px 20px 0;
   background: url(../images/guides-hero.png) right 80px no-repeat;
 }
 .hero h1 {

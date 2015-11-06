@@ -131,11 +131,11 @@ In der Datei `app/controllers/ideas_controller.rb` fügen wir in die `show` Meth
 @comment = @idea.comments.build
 {% endhighlight %}
 
-Öffne nun eine beliebige Idee unter <http://localhost:3000/ideas> in deinem Browser. Dort solltest du ein Formular finden um einen Kommentar zu erstellen sowie eine Auflistung von erstellten Kommentare, die auch gelöscht werden können.
+Öffne nun eine beliebige Idee unter <http://localhost:3000/ideas> in deinem Browser. Dort solltest du ein Formular finden, um einen Kommentar zu erstellen, sowie eine Auflistung von erstellten Kommentaren, die auch gelöscht werden können.
 
 
 ## Erweiterung der Web App abgeschlossen
 
-Gratulation, du hast deine Web App um eine Funktionalität erweitert!
+Gratulation, du hast deine Web App um eine Kommentarfunktionalität erweitert!
 
 Gehe auf die Übersichtsseite (<http://guides.railsgirlssb.de>) zurück, um weiter an deiner Applikation zu arbeiten.

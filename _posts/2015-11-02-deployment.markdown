@@ -6,8 +6,8 @@ permalink: deployment
 
 # Web App ins Internet stellen
 
-Es gibt viele Möglichkeiten seine Anwendung online zu stellen.
-Wir möchten euch einen Weg mit Hilfe von `Cloud Foundry` und anynines zeigen, da Cloud Foundry die Zukunft ist.
+Es gibt viele Möglichkeiten eine Anwendung online zu stellen.
+Wir möchten euch einen Weg mit Hilfe von `Cloud Foundry` und `anynines` zeigen, da Cloud Foundry die Zukunft ist.
 
 ## Cloud Foundry / anynines
 
@@ -27,9 +27,9 @@ In Deutschland gibt es eine öffentliche Installation von Cloud Foundry namens `
 
 1. [Erstelle einen kostenlosen anynines Zugang](http://anynines.com/).
 
-2. [Lade und installiere das Kommandozeilenprogramm cf](https://anynines.zendesk.com/entries/60241846-How-to-install-the-CLI-v6), um mit anynines arbeiten zu können.
+2. [Lade und installiere das Kommandozeilenprogramm cf](https://anynines.zendesk.com/entries/60241846-How-to-install-the-CLI-v6), um mit `anynines` arbeiten zu können.
 
-3. Anschließend müssen wir uns gegenüber anynines authentifizieren, indem wir die erhaltenen Zugangsdaten ausnutzen:
+3. Anschließend müssen wir uns gegenüber `anynines` authentifizieren, indem wir die erhaltenen Zugangsdaten ausnutzen:
 
 {% highlight sh %}
 cf api https://api.de.a9s.eu
@@ -38,7 +38,7 @@ cf login
 
 Du wirst nach der E-Mail-Adresse und dem Passwort gefragt, mit denen du dich registriert hast.
 
-Anschließend fragt das Tool noch, welchen `space` (Umgebung) du nutzen möchtest.
+Anschließend fragt das Tool noch, welchen `space` (Umgebung) du nutzen möchtest:
 
 {% highlight sh %}
 Select a space (or press enter to skip):
@@ -56,10 +56,10 @@ Wir wählen `1` für "production" aus, d.h. wir wollen in die Produktionsumgebun
 config.serve_static_files = true
 {% endhighlight %}
 
-In den nächsten Schritten werden deine lokale Dateien, die die Applikation ausmachen, direkt zu anynines hochgeladen.
-Wir müssen verhindern, dass gewisse Verzeichnisse mit hochgeladen werden, die nicht zu anynines gelangen sollten.
+In den nächsten Schritten werden deine lokalen Dateien, die die Applikation ausmachen, direkt zu `anynines` hochgeladen.
+Wir müssen verhindern, dass gewisse Verzeichnisse mit hochgeladen werden, die nicht zu `anynines` gelangen sollten.
 So wird z.B. beim Hochladen eines Bildes für eine Idee die hochgeladene Datei lokal in deinem Projektverzeichnis abgelegt.
-Diese Datei benötigen wir aber nicht auf dem anynines Server.
+Diese Datei benötigen wir aber nicht auf dem `anynines` Server.
 Führe also folgende Befehle aus, um das Hochladen dieser temporären Dateien zu verhindern:
 
 {% highlight sh %}
@@ -68,15 +68,20 @@ echo "tmp" >> .cfignore
 echo "logs" >> .cfignore
 {% endhighlight %}
 
+**Mögliche Fragen an deinen Coach:**
+
+* Lasse dir die obigen Zeilen erklären.
+
 
 ## Web App online stellen
-Nun können wir unsere Applikation zum ersten Mal auf anynines `ausliefern` bzw. `deployen`.
+Nun können wir unsere Applikation zum ersten Mal auf `anynines` `ausliefern` bzw. `deployen`.
 
-Wir müssen anynines einen Namen für unsere Applikation mitteilen.
-Es ist wichtig, dass wir im folgenden anynines einen eindeutigen Namen (kein anderer Teilnehmer sollte den gleichen wählen) für die Applikation mitteilen, da andere Teilnehmerinnen nicht den gleichen Namen benutzen dürfen.
-Überleg dir also einen Namen, wie etwa `rails-girls-ZUFALLSNAME`, wobei du ZUFALLSNAME durch ein eindeutiges Wort ersetzt (ohne Sonderzeichen), das die anderen Teilnehmer nicht wählen würden. Vielleicht ist dein Vor- oder Nachname eine Möglichkeit.
+Wir müssen `anynines` einen eindeutigen Namen für unsere Applikation mitteilen.
+Kein anderer Teilnehmer darf den gleichen gewählt haben.
+Überleg dir also einen Namen, wie etwa `rails-girls-ZUFALLSNAME`, wobei du ZUFALLSNAME durch ein eindeutiges Wort ersetzt (ohne Sonderzeichen).
+Dein Vor- oder Nachname wäre z.B. eine Möglichkeit.
 
-Nun ist es an der Zeit, die Applikation auf anynines zu veröffentlichen:
+Nun ist es an der Zeit, die Applikation auf `anynines` zu veröffentlichen:
 {% highlight sh %}
 cf push rails-girls-ZUFALLSNAME -c "bundle exec rake db:migrate && bundle exec rails s -p $PORT" -b http://github.com/cloudfoundry/ruby-buildpack.git#v1.3.1
 {% endhighlight %}

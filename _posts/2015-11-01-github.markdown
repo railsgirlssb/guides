@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Deine Web App auf GitHub hochladen
+title: Lade deine Web App auf GitHub
 permalink: github
 ---
 
@@ -11,7 +11,7 @@ permalink: github
 * Prüfe, ob Git installiert ist
   * Tippe hierfür `git --version` in dein Terminal
   * Die Version sollte 1.8 oder neuer sein
-* Falls Git nicht installiert ist, lade [Git hier herunter](http://git-scm.com/downloads) und installier es
+* Falls Git nicht installiert ist, lade [Git hier herunter](http://git-scm.com/downloads) und installiere es
 * Erstelle ein [GitHub](https://github.com) Benutzerkonto oder logge dich ein, wenn du bereits ein Benutzerkonto besitzt
 * Konfiguriere Git in deinem Terminal, indem du die folgenden zwei Befehle mit deinem Vor- und Nachnamen und deiner E-Mail Adresse konfigurierst
 {% highlight sh %}
@@ -19,8 +19,11 @@ git config --global user.name "Vorname Nachname"
 git config --global user.email "mail@example.com"
 {% endhighlight %}
 
+**Mögliche Fragen an deinen Coach:**
 
-**COACH:** Sprich ein wenig über Git, Versionskontrollsysteme und Open Source
+* Was ist Git?
+* Was sind Versionskontrollsysteme?
+* Was ist Open Source?
 
 ## Lade deine Web App auf GitHub
 
@@ -42,29 +45,28 @@ git status
 
 Es wird eine Liste von Dateien ausgegeben, die sich in deinem aktuellen Verzeichnis befinden.
 
-Um diese Dateien unter Versionskontrolle zu stellen, müssen wir die Dateien Git kenntlich machen:
+Um diese Dateien unter Versionskontrolle zu stellen, müssen wir die Dateien für Git kenntlich machen:
 
 {% highlight sh %}
 git add .
 {% endhighlight %}
 
-Diese Befehl stellt alle Dateien (und Änderungen) unter den sog. Staging Bereich.
-Zuletzt fassen wir diese nun im Staging Bereich befindlichen Dateien in einem `Commit` zusammen und hinterlassen die Nachricht `Mein erster Commit`.
+Dieser Befehl stellt alle Dateien (und Änderungen) unter den sog. Staging Bereich.
+Als Letztes fassen wir diese Dateien in einem `Commit` zusammen und hinterlassen die Nachricht `Mein erster Commit`.
 
 {% highlight sh %}
 git commit -m "Mein erster Commit"
 {% endhighlight %}
 
 Lokal haben wir nun unsere Dateien unter Versionskontrolle gestellt und werden diese Dateien nach GitHub in unser Projekt hochladen.
-Hierzu müssen wir folgenden Befehl mit der Git URL für das Projekt eingeben.
+Hierzu müssen wir folgenden Befehl mit der Git URL für das Projekt eingeben, ersetze dabei DEIN-BENUTZER mit deinem Benutzername, den du für Git ausgewählt hast:
 
 {% highlight sh %}
 git remote add origin https://github.com/DEIN-BENUTZER/rails-girls.git
 {% endhighlight %}
 
 Es wird eine Verbindung zwischen deiner lokalen Kopie des Projekts und der Version auf GitHub erstellt.
-Zuletzt laden wir die bisher gemachten Änderungen auf GitHub, indem wir die Git `push` Befehl anwenden.
-
+Zuletzt laden wir die bisher gemachten Änderungen auf GitHub, indem wir den Git `push` Befehl anwenden.
 
 {% highlight sh %}
 git push -u origin master
@@ -80,7 +82,7 @@ https://github.com/DEIN-BENUTZER/rails-girls
 
 ## Änderungen hochladen
 
-Wenn du weiter an dem Projekt arbeitest, kannst du die Änderungen mit den folgenden Befehlen auf GitHub `push`en.
+Wenn du weiter an dem Projekt arbeitest, kannst du die Änderungen mit den folgenden Befehlen auf GitHub `pushen`.
 
 
 {% highlight sh %}
@@ -94,10 +96,10 @@ git push origin master
 
 ### Sei Teil der Open Source Bewegung
 
-* Folge den anderen Rails Girls und den Coaches auf GitHub (z.B. [Corinna](https://github.com/corinnawiesner))
+* Folge den anderen Rails Girls und den Coaches auf GitHub ([Githubs der Coaches](http://railsgirlssb.de/#team))
 * [Stöbere](https://github.com/explore) in interessanten Open Source Projekten
 
 ### Lerne mehr über Git
 
-* Probier das interaktive Tutorial unter [trygit.org](http://try.github.io/) aus
+* Probiere das interaktive Tutorial unter [try.github.io](http://try.github.io/) aus
 * Schau dir das Git Cheat Sheet an, das wir dir mitgeben
